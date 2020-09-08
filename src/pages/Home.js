@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 import AppsIcon from "@material-ui/icons/Apps";
-import SearchIcon from "@material-ui/icons/Search";
-import MicIcon from "@material-ui/icons/Mic";
+
 import { Avatar } from "@material-ui/core";
 
+import Search from "../components/Search"
 
 function Home() {
   return (
@@ -14,17 +14,25 @@ function Home() {
       <div className="home__header">
         <div className="home__headerLeft">
           <Link to="about">About</Link>
-          <Link to="about">Store</Link>
+          <Link to="store">Store</Link>
         </div>
         <div className="home__headerRight">
-          <Link to="about">Gmail</Link>
-          <Link to="about">Images</Link>
-          <AppsIcon/>
-          <Avatar/>
+          <Link to="gmail">Gmail</Link>
+          <Link to="images">Images</Link>
+          <AppsIcon />
+          <Avatar />
         </div>
       </div>
       <div className="home__body">
-   
+        <img
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt="Google Logo"
+        />
+
+        <div className="home__bodyInputContainer">
+            <Search/>
+
+        </div>
       </div>
     </div>
   );
