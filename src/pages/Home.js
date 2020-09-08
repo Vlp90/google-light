@@ -30,8 +30,7 @@ function Home() {
         />
 
         <div className="home__bodyInputContainer">
-            <Search/>
-
+            <Search />
         </div>
       </div>
     </div>
