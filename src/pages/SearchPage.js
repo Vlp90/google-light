@@ -23,7 +23,6 @@ function SearchPage() {
   // LIVE API CALL
   const { data } = useGoogleSearch(term);
 
-
   // MOCK API CALL
   // const data = Response;
   console.log(data);
@@ -34,10 +33,8 @@ function SearchPage() {
 
   return (
     <div className="searchPage">
+      {/* DESKTOP */}
       <div className="searchPage__header">
-        {/* <h1>{term}</h1> */}
-        {/* <h2>{data}</h2> */}
-
         <Link to="/">
           <img
             className="searchPage__logo"
@@ -45,7 +42,6 @@ function SearchPage() {
             alt="Google Logo"
           />
         </Link>
-
         <div className="searchPage__headerBody">
           <Search hideButtons />
 
@@ -90,17 +86,77 @@ function SearchPage() {
               </div>
             </div>
           </div>
-        </div> <div className="searchPage__headerRight">
+        </div>{" "}
+        <div className="searchPage__headerRight">
           <Link to="gmail">Gmail</Link>
           <Link to="images">Images</Link>
           <AppsIcon />
           <Avatar />
         </div>
-
-
       </div>
-      {/* {term && ( */}
-      {true && (
+
+      {/* MOBILE VERSION */}
+      <div className="searchPage__mobile">
+        <div className="searchPage__headerMobile">
+          <AppsIcon />
+
+          <Link to="/">
+            <img
+              className="searchPage__logo"
+              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+              alt="Google Logo"
+            />
+          </Link>
+          <Avatar />
+        </div>
+
+        <div className="searchPage__searchBarMobile">
+          <Search hideButtons />
+        </div>
+
+        <div className="searchPage__optionsMobile">
+        <div className="searchPage__option">
+                <SearchIcon />
+                <Link to="all">All</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <DescriptionIcon />
+                <Link to="all">News</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <ImageIcon />
+                <Link to="all">Images</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <LocalOfferIcon />
+                <Link to="all">Shopping</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <RoomIcon />
+                <Link to="all">Maps</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <MoreVertIcon />
+                <Link to="all">More</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <Link to="setting">Settings</Link>
+              </div>
+              <div className="searchPage__option">
+                <Link to="tools">Tools</Link>
+              </div>
+            </div>
+          
+      </div>
+
+      {/* {true && ( */}
+      {term && (
         <div className="searchPage__results">
           <p className="searchPage__resultCount">
             About {data?.searchInformation.formattedTotalResults} results (

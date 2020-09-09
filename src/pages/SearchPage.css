@@ -11,7 +11,7 @@
     background-color: white;
     z-index: 100;
     align-items: flex-start;
-    padding: 20px  30px;
+    padding: 20px 30px;
     border-bottom: 1px solid lightgray;
 }
 
@@ -32,6 +32,22 @@
     margin-left: 20px;
 }
 
+.searchPage__optionsMobile {
+    /* margin-left: 30px; */
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* justify-content: center; */
+}
+
+.searchPage__optionsMobile > .searchPage__option {
+    display: flex;
+    align-items: center;
+    color: gray;
+    /* margin-left: 30px;  */
+    
+}
+
 .searchPage__optionsRight,
 .searchPage__optionsLeft {
     display: flex;
@@ -39,7 +55,8 @@
 }
 
 .searchPage__options a,
-.searchPage__optionsRight a {
+.searchPage__optionsRight a,
+.searchPage__optionsMobile a {
     text-decoration: none;
     color: gray;
 }
@@ -79,7 +96,7 @@ margin-top: 20px; */
     text-decoration: underline;
 }
 
-.search__resultTitle > h2 {
+.search__resultTitle>h2 {
     font-weight: 400;
 }
 
@@ -96,7 +113,7 @@ margin-top: 20px; */
     color: grey;
 }
 
-.search__resultSubTitle  {
+.search__resultSubTitle {
     text-decoration: none;
 }
 
@@ -104,7 +121,7 @@ margin-top: 20px; */
     width: 20px;
     height: 20px;
     margin-right: 7px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 100%;
 }
 
@@ -134,4 +151,135 @@ margin-top: 20px; */
 
 .searchPage__headerRight a:hover {
     text-decoration: underline;
+}
+
+.searchPage__headerMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    margin: 10px 15px;
+}
+
+.searchPage__headerMobile img {
+    /* background-color: red; */
+    /* margin: 20px auto;
+    display: flex; */
+
+}
+
+.searchPage__headerRightMobile {
+    display: flex;
+
+    align-items: center;
+    /* position: absolute;
+    top: 30px;
+    right: 20px; */
+}
+
+.searchPage__headerRightMobile>.MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+
+.searchPage__searchBarMobile {
+    /* background-color: red; */
+    margin-top: -33px !important;
+}
+
+.searchPage__optionsMobile {
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 20px;
+    /* padding-left:375px ; */
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.searchPage__optionsMobile::-webkit-scrollbar {
+    display: none;
+}
+
+.searchPage__optionsMobile >.searchPage__option a {
+    margin-left: 10px;
+    /* background-color: red; */
+}
+
+@media (max-width: 735px) {
+    .searchPage__optionsMobile {
+        /* margin-left: 30px;  */
+    display: flex;
+    /* flex: 1; */
+    width: 100%;
+    justify-content: flex-start !important;
+    /* padding-left: 20px ; */
+    /* padding-right: 20px ; */
+    }
+
+    .searchPage__optionsMobile div:first-child {
+        /* background-color: red; */
+        padding-left: 25px;
+    }
+
+    .searchPage__optionsMobile div:last-child {
+        /* background-color: red; */
+        padding-right: 25px;
+    }
+}
+
+
+@media (max-width: 1324px) {
+    .searchPage__headerRight a {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1190px) {
+    .searchPage__header {
+        display: none;
+    }
+
+    .searchPage__mobile {
+        /* background-color: red; */
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 20px;
+    }
+
+    .searchPage__logo {
+        margin-right: 0;
+        padding-top: 15px;
+
+    }
+
+    .searchPage__results {
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .search__result {
+        /* border: 1px solid lightgray; */
+        border-radius: 10px;
+        padding: 10px 15px 5px 15px;
+        margin: 10px;
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.20), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .searchPage__resultCount {
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width: 1190px) {
+    .searchPage__headerMobile {
+        display: none;
+    }
+
+    .searchPage__searchBarMobile {
+        display: none;
+    }
+    .searchPage__optionsMobile {
+        display: none;
+    }
 }
