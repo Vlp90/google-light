@@ -7,6 +7,8 @@ function SearchPage() {
 
   // custom service google Api
   // https://developers.google.com/custom-search/v1/using_rest
+  // https://cse.google.com/cse/create/new
+
   return (
     <div className="searchPage">
        <div className="searchPage__header">
