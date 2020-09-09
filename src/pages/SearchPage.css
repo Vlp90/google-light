@@ -17,9 +17,43 @@
 
 /* UNSET FROM ORIGINAL TO GET RESPONSIVE SEARCH BAR ON THE PAGE */
 
-.searchPage__headerBody > .search > .search__input {
+.searchPage__headerBody>.search>.search__input {
     margin-top: 0;
     margin: unset;
     width: unset;
     max-width: unset;
+}
+
+.searchPage__options {
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin-top:30px;
+    margin-left: 20px;
+}
+
+.searchPage__optionsRight,
+.searchPage__optionsLeft {
+    display: flex;
+
+}
+
+.searchPage__options a,
+.searchPage__optionsRight a {
+    text-decoration: none;
+    color: gray;
+}
+
+.searchPage__optionsRight {
+    margin-left: 80px;
+}
+
+.searchPage__option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.searchPage__options a {
+    margin-left: 5px;
 }
