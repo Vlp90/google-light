@@ -11,6 +11,7 @@ import ImageIcon from "@material-ui/icons/Image";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
@@ -40,46 +41,41 @@ function SearchPage() {
         </Link>
 
         <div className="searchPage__headerBody">
-
           <Search hideButtons />
 
-            <div className="searchPage__options">
+          <div className="searchPage__options">
+            <div className="searchPage__optionsLeft">
+              <div className="searchPage__option">
+                <SearchIcon />
+                <Link to="all">All</Link>
+              </div>
 
-          <div className="searchPage__optionsLeft">
+              <div className="searchPage__option">
+                <DescriptionIcon />
+                <Link to="all">News</Link>
+              </div>
 
-          <div className="searchPage__option">
-              <SearchIcon />
-              <Link to="all">All</Link>
+              <div className="searchPage__option">
+                <ImageIcon />
+                <Link to="all">Images</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <LocalOfferIcon />
+                <Link to="all">Shopping</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <RoomIcon />
+                <Link to="all">Maps</Link>
+              </div>
+
+              <div className="searchPage__option">
+                <MoreVertIcon />
+                <Link to="all">More</Link>
+              </div>
             </div>
-
-            <div className="searchPage__option">
-              <DescriptionIcon />
-              <Link to="all">News</Link>
-            </div>
-
-            <div className="searchPage__option">
-              <ImageIcon />
-              <Link to="all">Images</Link>
-            </div>
-
-            <div className="searchPage__option">
-              <LocalOfferIcon />
-              <Link to="all">Shopping</Link>
-            </div>
-
-            <div className="searchPage__option">
-              <RoomIcon />
-              <Link to="all">Maps</Link>
-            </div>
-
-            <div className="searchPage__option">
-              <MoreVertIcon />
-              <Link to="all">More</Link>
-            </div>
-
-          </div>
             <div className="searchPage__optionsRight">
-
               <div className="searchPage__option">
                 <Link to="setting">Settings</Link>
               </div>
@@ -87,10 +83,39 @@ function SearchPage() {
                 <Link to="tools">Tools</Link>
               </div>
             </div>
-      </div>
-      {/* <div className="searPage__results"></div> */}
+          </div>
         </div>
-    </div>
+      </div>
+      {/* {term && ( */}
+      {true && (
+        <div className="searchPage__results">
+          <h1>{term}</h1>
+          <p className="searchPage__resultCount">
+            About {data?.searchInformation.formattedTotalResults} results (
+            {data?.searchInformation.formattedSearchTime} seconds)
+          </p>
+          {data?.items.map((item) => (
+            <div className="search__result">
+              <a className="search__resultSubTitle" href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 &&
+                  item.pagemap?.cse_image[0]?.src && (
+                    <img
+                      className="searchPage__resultImage"
+                      src={item.pagemap?.cse_image[0]?.src}
+                      alt=""
+                    />
+                  )}
+                {item.displayLink} <ArrowDropDownIcon />
+              </a>
+
+              <a href={item.link} className="search__resultTitle">
+                <h2>{item.title}</h2>
+              </a>
+              <p className="search__resultSnippet">{item.snippet}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
