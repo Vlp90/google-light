@@ -13,6 +13,10 @@ import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
+import AppsIcon from "@material-ui/icons/Apps";
+
+import { Avatar } from "@material-ui/core";
+
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
 
@@ -86,7 +90,14 @@ function SearchPage() {
               </div>
             </div>
           </div>
+        </div> <div className="searchPage__headerRight">
+          <Link to="gmail">Gmail</Link>
+          <Link to="images">Images</Link>
+          <AppsIcon />
+          <Avatar />
         </div>
+
+
       </div>
       {/* {term && ( */}
       {true && (

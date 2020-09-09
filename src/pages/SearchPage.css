@@ -11,7 +11,7 @@
     background-color: white;
     z-index: 100;
     align-items: flex-start;
-    padding: 30px;
+    padding: 20px  30px;
     border-bottom: 1px solid lightgray;
 }
 
@@ -80,7 +80,7 @@ margin-top: 20px; */
 }
 
 .search__resultTitle > h2 {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 
@@ -104,6 +104,34 @@ margin-top: 20px; */
     width: 20px;
     height: 20px;
     margin-right: 7px;
-    /* object-fit: contain; */
+    object-fit: contain;
     border-radius: 100%;
+}
+
+.searchPage__headerRight {
+    display: flex;
+    align-items: center;
+    /* min-width: 13vw; */
+    justify-content: flex-end;
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+
+.searchPage__headerRight>.MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+
+.searchPage__headerRight a {
+    margin-right: 20px;
+    text-decoration: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+}
+
+.searchPage__headerRight a:hover {
+    text-decoration: underline;
 }

@@ -8,7 +8,7 @@ import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
 
 function Search({ hideButtons = false }) {
-  const [{}, dispatch] = useStateValue("");
+  const [{term}, dispatch] = useStateValue("");
   const [input, setInput] = useState("");
   const history = useHistory();
   // after the search push to /search page
@@ -39,7 +39,10 @@ function Search({ hideButtons = false }) {
           onChange={(e) => setInput(e.target.value)}
           name=""
           id=""
+          placeholder={term}
         />
+
+        
         <MicIcon className="search__inputIcon" />
       </div>
 
