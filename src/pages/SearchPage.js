@@ -17,9 +17,11 @@ function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
 
   // LIVE API CALL
-  // const { data } = useGoogleSearch(term);
+  const { data } = useGoogleSearch(term);
 
-  const data = Response;
+
+  // MOCK API CALL
+  // const data = Response;
   console.log(data);
 
   // custom service google Api
@@ -89,7 +91,6 @@ function SearchPage() {
       {/* {term && ( */}
       {true && (
         <div className="searchPage__results">
-          <h1>{term}</h1>
           <p className="searchPage__resultCount">
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime} seconds)
