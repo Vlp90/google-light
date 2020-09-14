@@ -39,7 +39,7 @@ function Search({ hideButtons = false }) {
           onChange={(e) => setInput(e.target.value)}
           name=""
           id=""
-          placeholder={term}
+          // placeholder={term}
         />
 
         
