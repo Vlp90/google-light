@@ -32,7 +32,7 @@ function Search({ hideButtons = false }) {
   return (
     <form className="search">
       <div className="search__input">
-        <SearchIcon className="search__inputIcon" />
+        <SearchIcon onClick={search} className="search__inputIcon" />
         <input
           type="text"
           value={input}

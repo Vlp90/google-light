@@ -110,9 +110,9 @@ function SearchPage() {
           <Avatar />
         </div>
 
-        <div className="searchPage__searchBarMobile">
+        <form className="searchPage__searchBarMobile">
           <Search hideButtons />
-        </div>
+        </form>
 
         <div className="searchPage__optionsMobile">
         <div className="searchPage__option">
