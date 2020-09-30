@@ -185,6 +185,7 @@ margin-top: 20px; */
 .searchPage__searchBarMobile {
     /* background-color: red; */
     margin-top: -33px !important;
+
 }
 
 .searchPage__optionsMobile {
@@ -236,6 +237,13 @@ margin-top: 20px; */
 
 @media (max-width: 1190px) {
     .searchPage__header {
+        /* display: none; */
+    }
+
+    .searchPage__searchBarMobile {
+        display: none;
+    }
+    .searchPage__optionsMobile {
         display: none;
     }
 
